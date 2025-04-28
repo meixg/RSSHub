@@ -139,6 +139,19 @@
       }
     ]
   },
+  "10000link.com": {
+    "_name": "10000万联网",
+    "info": [
+      {
+        "title": "新闻",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/:category"
+        ],
+        "target": "/10000link(params,url)=>{const urlObj=new URL(url);const id=urlObj.searchParams.get(\"chid\")??void 0;const category=params.category;return`/10000link/info${category?`/${category}${id?`/${id}`:\"\"}`:\"\"}`}"
+      }
+    ]
+  },
   "10jqka.com.cn": {
     "_name": "同花顺财经",
     "news": [
@@ -2905,6 +2918,27 @@
       }
     ]
   },
+  "adquan.com": {
+    "_name": "广告门",
+    "www": [
+      {
+        "title": "案例库",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/case_library/index"
+        ],
+        "target": "/adquan/case_library"
+      },
+      {
+        "title": "最新文章",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/"
+        ],
+        "target": "/adquan/"
+      }
+    ]
+  },
   "aeaweb.org": {
     "_name": "American Economic Association",
     ".": [
@@ -2937,6 +2971,19 @@
           "/:type"
         ],
         "target": "/aeon/:type"
+      }
+    ]
+  },
+  "aflcio.org": {
+    "_name": "AFL-CIO",
+    ".": [
+      {
+        "title": "Blog",
+        "docs": "https://docs.rsshub.app/routes/other",
+        "source": [
+          "/blog"
+        ],
+        "target": "/aflcio/blog"
       }
     ]
   },
@@ -4765,6 +4812,19 @@
           "/"
         ],
         "target": "/anthropic/news"
+      }
+    ]
+  },
+  "anytxt.net": {
+    "_name": "Anytxt Searcher",
+    ".": [
+      {
+        "title": "Release Notes",
+        "docs": "https://docs.rsshub.app/routes/program-update",
+        "source": [
+          "/"
+        ],
+        "target": "/anytxt/anytxt/release-notes"
       }
     ]
   },
@@ -10084,6 +10144,19 @@
       }
     ]
   },
+  "coolpc.com.tw": {
+    "_name": "原價屋",
+    "www": [
+      {
+        "title": "促銷&開箱",
+        "docs": "https://docs.rsshub.app/routes/shopping",
+        "source": [
+          "/"
+        ],
+        "target": "/coolpc/news"
+      }
+    ]
+  },
   "coomer.su": {
     "_name": "Coomer",
     ".": [
@@ -10095,19 +10168,6 @@
           "/"
         ],
         "target": "/coomer/:source?/:id?"
-      }
-    ]
-  },
-  "copernicium.tw": {
-    "_name": "日新说",
-    "www": [
-      {
-        "title": "分类",
-        "docs": "https://docs.rsshub.app/routes/new-media",
-        "source": [
-          "/"
-        ],
-        "target": "/copernicium/:category?"
       }
     ]
   },
@@ -11569,9 +11629,9 @@
       }
     ]
   },
-  "domp4.cc": {
+  "xlmp4.com": {
     "_name": "DoMP4 影视",
-    ".": [
+    "www": [
       {
         "title": "剧集订阅",
         "docs": "https://docs.rsshub.app/routes/multimedia",
@@ -19954,6 +20014,27 @@
       }
     ]
   },
+  "jandan.net": {
+    "_name": "煎蛋",
+    "i": [
+      {
+        "title": "Feed",
+        "docs": "https://docs.rsshub.app/routes/other",
+        "source": [
+          "/"
+        ],
+        "target": "/jandan/jandan"
+      },
+      {
+        "title": "Section",
+        "docs": "https://docs.rsshub.app/routes/other",
+        "source": [
+          "/:category"
+        ],
+        "target": "/jandan/jandan/:category?"
+      }
+    ]
+  },
   "javbus.com": {
     "_name": "JavBus",
     "www": [
@@ -20635,6 +20716,19 @@
       }
     ]
   },
+  "jpmorganchase.com": {
+    "_name": "JPMorgan Chase",
+    ".": [
+      {
+        "title": "Research Topics",
+        "docs": "https://docs.rsshub.app/routes/finance",
+        "source": [
+          "/institute/all-topics"
+        ],
+        "target": "/jpmorganchase/"
+      }
+    ]
+  },
   "12356782.xyz": {
     "_name": "极品性感美女",
     "www": [
@@ -21055,7 +21149,7 @@
     ]
   },
   "kurogames.com": {
-    "_name": "库洛游戏",
+    "_name": "库洛游戏 | Kuro Games",
     "mc": [
       {
         "title": "鸣潮 — 游戏公告、新闻与活动",
@@ -21064,7 +21158,18 @@
           "/m/main/news",
           "/main"
         ],
-        "target": "/kurogames/wutheringwaves/news"
+        "target": "/kurogames/wutheringwaves/news/:language?"
+      }
+    ],
+    "wutheringwaves": [
+      {
+        "title": "Wuthering Waves — Game announcements, news and events",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/en/main/news",
+          "/en/main"
+        ],
+        "target": "/kurogames/wutheringwaves/news/:language?"
       }
     ]
   },
